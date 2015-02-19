@@ -14,7 +14,7 @@ $(document).ready(function() {
     $.cookie.json = true;
     // TODO check if logged in
 
-    $.get('/php/auth/user', function(data) {
+    $.get('php/auth/user', function(data) {
         if (data.success) {
             $.cookie('user', data.user);
             showTable();
@@ -32,7 +32,7 @@ $(document).ready(function() {
         var email = $("#loginEmail").val();
         var password = $("#loginPassword").val();
 
-        $.post('/php/auth/signin', {email: email, password: password}, function(data) {
+        $.post('php/auth/signin', {email: email, password: password}, function(data) {
             // console.log(data);
             if (data.success) {
                 $.cookie('user', data.user);
@@ -42,8 +42,11 @@ $(document).ready(function() {
                 $('#account-menu').removeClass('hidden');
                 //$('#login-register').collapse('show');
                 $('#project-list').collapse('show');
+                $('#login-wrong-credentials').addClass('hidden');
             } else {
-
+                $("#loginEmail").addClass("has-error");
+                $("#loginPassword").addClass("has-error");
+                $('#login-wrong-credentials').removeClass('hidden');
             }
         });
     });
@@ -54,9 +57,9 @@ $(document).ready(function() {
         var email = $("#registerEmail").val();
         var screenname = $("#registerScreenname").val();
         var password = $("#registerPassword").val();
-        var passwordConfirm = $("#registerPasswordConfirum").val();
+        var passwordConfirm = $("#registerPasswordConfirm").val();
 
-        $.post('/php/auth/register', {email: email, screenname: screenname, password: password, passwordConfirm: passwordConfirm}, function(data) {
+        $.post('php/auth/register', {email: email, screenname: screenname, password: password, passwordConfirm: passwordConfirm}, function(data) {
             $(".form-group").removeClass("has-error");
             $(".icon").addClass("hidden");
             $(".message").remove();
@@ -85,7 +88,7 @@ $(document).ready(function() {
     $('#delete-project').on('click', function() {
         utils.confirm("Confirm delete", "Deleted projects can not be restored.<br/>Are you sure?", function(result) {
             if (result) {
-                $.get('/php/project/delete/' + selectedProject['id'], function(data) {
+                $.get('php/project/delete/' + selectedProject['id'], function(data) {
                     if (data.success) {
                         utils.showMessage("Project deleted", "Your project has been deleted");
                         $('#project-list').collapse('show');
@@ -154,7 +157,7 @@ $(document).ready(function() {
         selectedProject['private'] = $('#private-project').is(':checked');
         selectedProject['shared'] = $('#shared-project').is(':checked');
 
-        $.post('/php/project/saveBaseData', selectedProject, function(data) {
+        $.post('php/project/saveBaseData', selectedProject, function(data) {
             if (data.success) {
                 utils.showMessage("Project saved", "Your project has been saved");
 //                $('#project-list').collapse('show');

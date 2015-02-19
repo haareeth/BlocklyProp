@@ -1,9 +1,8 @@
 /*
-
-This file contains support for all Parallax compatible PIR sensors
-
-Author: valetolpegin@gmail.com ( Vale Tolpegin )
-
+  This file contains support for all Parallax compatible PIR Sensors
+  
+  Author: Vale Tolpegin ( valetolpegin@gmail.com )
+  
  *Copyright 2014 Vale Tolpegin.
  *
  *
@@ -42,11 +41,11 @@ Blockly.Language.PIR_Sensor = {
 };
 
 //Get generators
-Blockly.propc = Blockly.Generator.get( 'propc' );
+Blockly.Spin = Blockly.Generator.get( 'Spin' );
 
-Blockly.propc.PIR_Sensor = function() {
+Blockly.Spin.PIR_Sensor = function() {
   var pin = this.getTitleValue( 'PIN' );
   
-  var code = 'input( ' + pin + ' )';
-  return [ code, Blockly.propc.ORDER_ATOMIC ];
+  var code = 'ina[ ' + pin + ' ]';
+  return [ code, Blockly.Spin.ORDER_ATOMIC ];
 };
