@@ -24,11 +24,11 @@
 'use strict';
 
 //define blocks
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
 
-Blockly.Language.serial_open = {
+Blockly.Blocks.serial_open = {
     category: 'Serial',
     helpUrl: '',
     init: function() {
@@ -47,7 +47,7 @@ Blockly.Language.serial_open = {
     }
 };
 
-Blockly.Language.serial_tx_byte = {
+Blockly.Blocks.serial_tx_byte = {
     category: 'Serial',
     helpUrl: '',
     init: function() {
@@ -61,7 +61,7 @@ Blockly.Language.serial_tx_byte = {
     }
 };
 
-Blockly.Language.serial_send_text = {
+Blockly.Blocks.serial_send_text = {
     category: 'Serial',
     helpUrl: '',
     init: function() {
@@ -78,7 +78,7 @@ Blockly.Language.serial_send_text = {
     }
 };
 
-Blockly.Language.serial_rx_byte = {
+Blockly.Blocks.serial_rx_byte = {
     category: 'Serial',
     helpUrl: '',
     init: function() {
@@ -91,7 +91,7 @@ Blockly.Language.serial_rx_byte = {
 };
 
 // define generators
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.serial_open = function() {
     var dropdown_rx_pin = this.getTitleValue('RXPIN');

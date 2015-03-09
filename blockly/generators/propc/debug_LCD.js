@@ -25,12 +25,12 @@
 
 
 //define blocks
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
 
 //servo block
-Blockly.Language.debug_lcd_init = {
+Blockly.Blocks.debug_lcd_init = {
     category: 'Debug LCD',
     helpUrl: '',
     init: function() {
@@ -47,7 +47,7 @@ Blockly.Language.debug_lcd_init = {
     }
 };
 
-Blockly.Language.debug_lcd_clear = {
+Blockly.Blocks.debug_lcd_clear = {
     category: 'Debug LCD',
     helpUrl: '',
     init: function() {
@@ -59,7 +59,7 @@ Blockly.Language.debug_lcd_clear = {
     }
 };
 
-Blockly.Language.debug_lcd_print = {
+Blockly.Blocks.debug_lcd_print = {
     category: 'Debug LCD',
     helpUrl: '',
     init: function() {
@@ -76,7 +76,7 @@ Blockly.Language.debug_lcd_print = {
     }
 };
 
-Blockly.Language.debug_lcd_number = {
+Blockly.Blocks.debug_lcd_number = {
     category: 'Debug LCD',
     helpUrl: '',
     init: function() {
@@ -91,7 +91,7 @@ Blockly.Language.debug_lcd_number = {
     }
 };
 
-Blockly.Language.debug_lcd_action = {
+Blockly.Blocks.debug_lcd_action = {
     category: 'Debug LCD',
     helpUrl: '',
     init: function() {
@@ -105,7 +105,7 @@ Blockly.Language.debug_lcd_action = {
 };
 
 // define generators
-Blockly.propc = Blockly.Generator.get( 'propc' );
+//Blockly.propc = new Blockly.Generator( 'propc' );
 
 Blockly.propc.debug_lcd_init = function() {
     var dropdown_pin = this.getTitleValue('PIN');

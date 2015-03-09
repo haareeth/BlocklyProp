@@ -24,12 +24,12 @@
 
 
 //define blocks
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
 
 //servo block
-Blockly.Language.ab_volt_in = {
+Blockly.Blocks.ab_volt_in = {
     category: 'ADC/DAC',
     helpUrl: '',
     init: function() {
@@ -41,7 +41,7 @@ Blockly.Language.ab_volt_in = {
     }
 };
 
-Blockly.Language.ab_volt_v_in = {
+Blockly.Blocks.ab_volt_v_in = {
     category: 'ADC/DAC',
     helpUrl: '',
     init: function() {
@@ -53,7 +53,7 @@ Blockly.Language.ab_volt_v_in = {
     }
 };
 
-Blockly.Language.ab_volt_out = {
+Blockly.Blocks.ab_volt_out = {
     category: 'ADC/DAC',
     helpUrl: '',
     init: function() {
@@ -70,7 +70,7 @@ Blockly.Language.ab_volt_out = {
     }
 };
 
-Blockly.Language.ab_volt_v_out = {
+Blockly.Blocks.ab_volt_v_out = {
     category: 'ADC/DAC',
     helpUrl: '',
     init: function() {
@@ -88,7 +88,7 @@ Blockly.Language.ab_volt_v_out = {
 };
 
 // define generators
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.ab_volt_in = function() {
     var dropdown_channel = this.getTitleValue('CHANNEL');

@@ -21,11 +21,11 @@
 */
 'use strict';
 
-if ( !Blockly.Language )
-  Blockly.Language = {};
+if ( !Blockly.Blocks )
+  Blockly.Blocks = {};
 
 //Creating GUI blocks for eTape liquid sensor
-Blockly.Language.etape_rc_time = {
+Blockly.Blocks.etape_rc_time = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -50,7 +50,7 @@ Blockly.Language.etape_rc_time = {
   }
 };
 
-Blockly.Language.etape_voltage_input = {
+Blockly.Blocks.etape_voltage_input = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -66,7 +66,7 @@ Blockly.Language.etape_voltage_input = {
 };
 
 //Get generator
-Blockly.propc = Blockly.Generator.get( 'propc' );
+//Blockly.propc = new Blockly.Generator( 'propc' );
 
 //Create code for blocks
 Blockly.propc.etape_rc_time = function() {

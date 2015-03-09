@@ -23,7 +23,7 @@
  */
 'use strict';
 
-Blockly.Language.colour_picker = {
+Blockly.Blocks.colour_picker = {
   // Colour picker.
   category: Blockly.LANG_CATEGORY_COLOUR,
   helpUrl: Blockly.LANG_COLOUR_PICKER_HELPURL,
@@ -36,7 +36,7 @@ Blockly.Language.colour_picker = {
   }
 };
 
-Blockly.Language.colour_rgb = {
+Blockly.Blocks.colour_rgb = {
   // Compose a colour from RGB components.
   category: Blockly.LANG_CATEGORY_COLOUR,
   helpUrl: Blockly.LANG_COLOUR_RGB_HELPURL,
@@ -60,7 +60,7 @@ Blockly.Language.colour_rgb = {
   }
 };
 
-Blockly.Language.colour_blend = {
+Blockly.Blocks.colour_blend = {
   // Blend two colours together.
   category: Blockly.LANG_CATEGORY_COLOUR,
   helpUrl: 'http://meyerweb.com/eric/tools/color-blend/',

@@ -25,11 +25,11 @@
 'use strict';
 
 //define blocks
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
 
-Blockly.Language.console_print = {
+Blockly.Blocks.console_print = {
     category: 'Console',
     helpUrl: '',
     init: function() {
@@ -46,7 +46,7 @@ Blockly.Language.console_print = {
     }
 };
 
-Blockly.Language.console_print_variables = {
+Blockly.Blocks.console_print_variables = {
     category: 'Console',
     helpUrl: '',
     init: function() {
@@ -61,7 +61,7 @@ Blockly.Language.console_print_variables = {
 
 
 // define generators
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.console_print = function() {
     var text = this.getTitleValue('TEXT');

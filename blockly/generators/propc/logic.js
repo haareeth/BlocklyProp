@@ -23,7 +23,7 @@
  */
 'use strict';
 
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.logic_compare = function() {
     // Comparison operator.

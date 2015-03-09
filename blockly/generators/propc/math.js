@@ -26,16 +26,16 @@
 //To support syntax defined in http://arduino.cc/en/Reference/HomePage
 
 //define blocks
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
 
 
 
 // define generators
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
-Blockly.propc.math_number = function() {
+Blockly.propc['math_number'] = function() {
     // Numeric value.
     var code = window.parseFloat(this.getTitleValue('NUM'));
     // -4.abs() returns -4 in Dart due to strange order of operation choices.
@@ -118,7 +118,7 @@ Blockly.propc.math_single = function() {
 
 // Limit
 
-Blockly.Language.math_limit = {
+Blockly.Blocks.math_limit = {
     // Basic arithmetic operator.
     category: Blockly.LANG_CATEGORY_MATH,
     helpUrl: "",
@@ -135,7 +135,7 @@ Blockly.Language.math_limit = {
     }
 };
 
-Blockly.Language.math_limit.OPERATORS =
+Blockly.Blocks.math_limit.OPERATORS =
         [["Limit min", 'LIMIT_MIN'],
             ["Limit max", 'LIMIT_MAX']];
 
@@ -162,7 +162,7 @@ Blockly.propc.math_limit.OPERATORS = {
 };
 
 // Increment/decrement
-Blockly.Language.math_crement = {
+Blockly.Blocks.math_crement = {
     // Rounding functions.
     category: Blockly.LANG_CATEGORY_MATH,
     helpUrl: "",
@@ -179,7 +179,7 @@ Blockly.Language.math_crement = {
     }
 };
 
-Blockly.Language.math_crement.OPERATORS =
+Blockly.Blocks.math_crement.OPERATORS =
         [["Decrement", 'DEC'],
             ["Increment", 'INC']];
 

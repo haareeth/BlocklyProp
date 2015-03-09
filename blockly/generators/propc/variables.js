@@ -23,10 +23,10 @@
  */
 'use strict';
 
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
-Blockly.Language.variables_get = {
+Blockly.Blocks.variables_get = {
     // Variable getter.
     category: null, // Variables are handled specially.
     helpUrl: Blockly.LANG_VARIABLES_GET_HELPURL,
@@ -49,7 +49,7 @@ Blockly.Language.variables_get = {
     }
 };
 
-Blockly.Language.variables_declare = {
+Blockly.Blocks.variables_declare = {
     // Variable setter.
     category: null, // Variables are handled specially.
     helpUrl: Blockly.LANG_VARIABLES_SET_HELPURL,
@@ -76,7 +76,7 @@ Blockly.Language.variables_declare = {
     }
 };
 
-Blockly.Language.variables_set = {
+Blockly.Blocks.variables_set = {
     // Variable setter.
     category: null, // Variables are handled specially.
     helpUrl: Blockly.LANG_VARIABLES_SET_HELPURL,
@@ -106,7 +106,7 @@ Blockly.Language.variables_set = {
  * @author michel@creatingfuture.eu  (Michel Lampo)
  */
 
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.variables_get = function() {
     // Variable getter.

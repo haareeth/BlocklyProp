@@ -24,10 +24,10 @@
 'use strict';
 
 //define blocks
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
-Blockly.Language.inout_digital_write = {
+Blockly.Blocks.inout_digital_write = {
     category: 'In/Out',
     helpUrl: 'help/block-digitalpin.html#write',
     init: function() {
@@ -43,7 +43,7 @@ Blockly.Language.inout_digital_write = {
     }
 };
 
-Blockly.Language.inout_digital_read = {
+Blockly.Blocks.inout_digital_read = {
     category: 'In/Out',
     helpUrl: 'help/block-digitalpin.html#read',
     init: function() {
@@ -56,7 +56,7 @@ Blockly.Language.inout_digital_read = {
     }
 };
 
-Blockly.Language.inout_digital_write_pin = {
+Blockly.Blocks.inout_digital_write_pin = {
     category: 'In/Out',
     helpUrl: 'help/block-digitalpin.html#write-pin',
     init: function() {
@@ -72,7 +72,7 @@ Blockly.Language.inout_digital_write_pin = {
     }
 };
 
-Blockly.Language.inout_digital_read_pin = {
+Blockly.Blocks.inout_digital_read_pin = {
     category: 'In/Out',
     helpUrl: 'help/block-digitalpin.html#read-pin',
     init: function() {
@@ -85,14 +85,14 @@ Blockly.Language.inout_digital_read_pin = {
     }
 };
 
-Blockly.Language.base_delay = {
+Blockly.Blocks.base_delay = {
     category: 'Control',
     helpUrl: 'help/block-delay.html',
     init: function() {
         this.setColour(120);
-        this.appendValueInput("DELAY_TIME", Number)
+        this.appendValueInput("DELAY_TIME", 'Number')
                 .appendTitle("Delay (ms)")
-                .setCheck(Number);
+                .setCheck('Number');
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -100,7 +100,7 @@ Blockly.Language.base_delay = {
     }
 };
 
-Blockly.Language.base_freqout = {
+Blockly.Blocks.base_freqout = {
     category: 'Control',
     helpUrl: '',
     init: function() {
@@ -123,7 +123,7 @@ Blockly.Language.base_freqout = {
 
 
 // define generators
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.inout_digital_write = function() {
     var dropdown_pin = this.getTitleValue('PIN');

@@ -23,7 +23,7 @@
  */
 'use strict';
 
-Blockly.Language.move = {
+Blockly.Blocks.move = {
     category: Blockly.LANG_CATEGORY_CONTROLS,
     helpUrl: Blockly.LANG_CONTROLS_REPEAT_HELPURL,
     init: function() {
@@ -36,7 +36,7 @@ Blockly.Language.move = {
     }
 };
 
-Blockly.Language.line_sensor = {
+Blockly.Blocks.line_sensor = {
     category: Blockly.LANG_CATEGORY_CONTROLS,
     helpUrl: Blockly.LANG_CONTROLS_REPEAT_HELPURL,
     init: function() {

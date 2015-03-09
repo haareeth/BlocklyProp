@@ -99,7 +99,7 @@ function renderContent() {
     } else if (content.id == 'content_propc') {
         //content.innerHTML = Blockly.Generator.workspaceToCode('Arduino');
         var propcTextarea = document.getElementById('textarea_propc');
-        propcTextarea.value = Blockly.Generator.workspaceToCode('propc');
+        propcTextarea.value = Blockly.propc.workspaceToCode();
         propcTextarea.focus();
     }
 }
@@ -138,7 +138,7 @@ function compile() {
     $("#compile-console").val('');
     $('#compile-dialog').modal('show');
     if (client_available) {
-        var propcCode = Blockly.Generator.workspaceToCode('propc');
+        var propcCode = Blockly.propc.workspaceToCode();
 
         $.post(client_url + 'compile.action', {action: "COMPILE", language: "prop-c", code: propcCode}, function(data) {
             $("#compile-console").val(data.message);
@@ -158,7 +158,7 @@ function loadIntoRam() {
     $('#compile-dialog').modal('show');
 
     if (client_available) {
-        var propcCode = Blockly.Generator.workspaceToCode('propc');
+        var propcCode = Blockly.propc.workspaceToCode();
 
         $.post(client_url + 'compile.action', {action: "RAM", language: "prop-c", code: propcCode, "comport": getComPort()}, function(data) {
             $("#compile-console").val(data.message);
@@ -178,7 +178,7 @@ function loadIntoEeprom() {
     $('#compile-dialog').modal('show');
 
     if (client_available) {
-        var propcCode = Blockly.Generator.workspaceToCode('propc');
+        var propcCode = Blockly.propc.workspaceToCode();
 
         $.post(client_url + 'compile.action', {action: "EEPROM", language: "prop-c", code: propcCode, "comport": getComPort()}, function(data) {
             $("#compile-console").val(data.message);

@@ -23,7 +23,7 @@
  */
 'use strict';
 
-Blockly.Language.lists_create_empty = {
+Blockly.Blocks.lists_create_empty = {
   // Create an empty list.
   category: Blockly.LANG_CATEGORY_LISTS,
   helpUrl: Blockly.LANG_LISTS_CREATE_EMPTY_HELPURL,
@@ -36,7 +36,7 @@ Blockly.Language.lists_create_empty = {
   }
 };
 
-Blockly.Language.lists_create_with = {
+Blockly.Blocks.lists_create_with = {
   // Create a list with any number of elements of any type.
   category: Blockly.LANG_CATEGORY_LISTS,
   helpUrl: '',
@@ -129,7 +129,7 @@ Blockly.Language.lists_create_with = {
   }
 };
 
-Blockly.Language.lists_create_with_container = {
+Blockly.Blocks.lists_create_with_container = {
   // Container.
   init: function() {
     this.setColour(210);
@@ -141,7 +141,7 @@ Blockly.Language.lists_create_with_container = {
   }
 };
 
-Blockly.Language.lists_create_with_item = {
+Blockly.Blocks.lists_create_with_item = {
   // Add items.
   init: function() {
     this.setColour(210);
@@ -154,7 +154,7 @@ Blockly.Language.lists_create_with_item = {
   }
 };
 
-Blockly.Language.lists_repeat = {
+Blockly.Blocks.lists_repeat = {
   // Create a list with one element repeated.
   category: Blockly.LANG_CATEGORY_LISTS,
   helpUrl: Blockly.LANG_LISTS_REPEAT_HELPURL,
@@ -173,7 +173,7 @@ Blockly.Language.lists_repeat = {
   }
 };
 
-Blockly.Language.lists_length = {
+Blockly.Blocks.lists_length = {
   // List length.
   category: Blockly.LANG_CATEGORY_LISTS,
   helpUrl: Blockly.LANG_LISTS_LENGTH_HELPURL,
@@ -187,7 +187,7 @@ Blockly.Language.lists_length = {
   }
 };
 
-Blockly.Language.lists_isEmpty = {
+Blockly.Blocks.lists_isEmpty = {
   // Is the list empty?
   category: Blockly.LANG_CATEGORY_LISTS,
   helpUrl: Blockly.LANG_LISTS_IS_EMPTY_HELPURL,
@@ -201,7 +201,7 @@ Blockly.Language.lists_isEmpty = {
   }
 };
 
-Blockly.Language.lists_indexOf = {
+Blockly.Blocks.lists_indexOf = {
   // Find an item in the list.
   category: Blockly.LANG_CATEGORY_LISTS,
   helpUrl: Blockly.LANG_LISTS_INDEX_OF_HELPURL,
@@ -220,11 +220,11 @@ Blockly.Language.lists_indexOf = {
   }
 };
 
-Blockly.Language.lists_indexOf.OPERATORS =
+Blockly.Blocks.lists_indexOf.OPERATORS =
     [[Blockly.LANG_LISTS_INDEX_OF_FIRST, 'FIRST'],
      [Blockly.LANG_LISTS_INDEX_OF_LAST, 'LAST']];
 
-Blockly.Language.lists_getIndex = {
+Blockly.Blocks.lists_getIndex = {
   // Get element at index.
   category: Blockly.LANG_CATEGORY_LISTS,
   helpUrl: Blockly.LANG_LISTS_GET_INDEX_HELPURL,
@@ -242,7 +242,7 @@ Blockly.Language.lists_getIndex = {
   }
 };
 
-Blockly.Language.lists_setIndex = {
+Blockly.Blocks.lists_setIndex = {
   // Set element at index.
   category: Blockly.LANG_CATEGORY_LISTS,
   helpUrl: Blockly.LANG_LISTS_SET_INDEX_HELPURL,

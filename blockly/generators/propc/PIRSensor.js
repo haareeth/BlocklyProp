@@ -22,11 +22,11 @@ Author: valetolpegin@gmail.com ( Vale Tolpegin )
 */
 'use strict';
 
-if ( !Blockly.Language )
-  Blockly.Language = {};
+if ( !Blockly.Blocks )
+  Blockly.Blocks = {};
  
 //PIR sensor blocks 
-Blockly.Language.PIR_Sensor = {
+Blockly.Blocks.PIR_Sensor = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -42,7 +42,7 @@ Blockly.Language.PIR_Sensor = {
 };
 
 //Get generators
-Blockly.propc = Blockly.Generator.get( 'propc' );
+//Blockly.propc = new Blockly.Generator( 'propc' );
 
 Blockly.propc.PIR_Sensor = function() {
   var pin = this.getTitleValue( 'PIN' );

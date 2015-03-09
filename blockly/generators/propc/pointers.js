@@ -23,10 +23,10 @@
  */
 'use strict';
 
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
-Blockly.Language.pointers_get = {
+Blockly.Blocks.pointers_get = {
     // Variable getter.
     category: null, // Variables are handled specially.
     helpUrl: Blockly.LANG_VARIABLES_GET_HELPURL,
@@ -49,7 +49,7 @@ Blockly.Language.pointers_get = {
     }
 };
 
-Blockly.Language.pointers_declare = {
+Blockly.Blocks.pointers_declare = {
     // Variable setter.
     category: null, // Variables are handled specially.
     helpUrl: Blockly.LANG_VARIABLES_SET_HELPURL,
@@ -76,7 +76,7 @@ Blockly.Language.pointers_declare = {
     }
 };
 
-Blockly.Language.pointers_set = {
+Blockly.Blocks.pointers_set = {
     // Variable setter.
     category: null, // Variables are handled specially.
     helpUrl: Blockly.LANG_VARIABLES_SET_HELPURL,
@@ -106,7 +106,7 @@ Blockly.Language.pointers_set = {
  * @author michel@creatingfuture.eu  (Michel Lampo)
  */
 
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.pointers_get = function() {
     // Variable getter.

@@ -23,24 +23,24 @@
  */
 'use strict';
 
-Blockly.Language.text = {
+Blockly.Blocks.text = {
   // Text value.
   category: Blockly.LANG_CATEGORY_TEXT,
   helpUrl: Blockly.LANG_TEXT_TEXT_HELPURL,
   init: function() {
     this.setColour(160);
     this.appendDummyInput()
-        .appendTitle(new Blockly.FieldImage(Blockly.pathToBlockly +
-        'media/quote0.png', 12, 12))
+        .appendTitle(new Blockly.FieldImage(Blockly.pathToMedia +
+        'quote0.png', 12, 12))
         .appendTitle(new Blockly.FieldTextInput(''), 'TEXT')
-        .appendTitle(new Blockly.FieldImage(Blockly.pathToBlockly +
-        'media/quote1.png', 12, 12));
+        .appendTitle(new Blockly.FieldImage(Blockly.pathToMedia +
+        'quote1.png', 12, 12));
     this.setOutput(true, String);
     this.setTooltip(Blockly.LANG_TEXT_TEXT_TOOLTIP);
   }
 };
 
-Blockly.Language.text_join = {
+Blockly.Blocks.text_join = {
   // Create a string made up of any number of elements of any type.
   category: Blockly.LANG_CATEGORY_TEXT,
   helpUrl: Blockly.LANG_TEXT_JOIN_HELPURL,
@@ -138,7 +138,7 @@ Blockly.Language.text_join = {
   }
 };
 
-Blockly.Language.text_create_join_container = {
+Blockly.Blocks.text_create_join_container = {
   // Container.
   init: function() {
     this.setColour(160);
@@ -150,7 +150,7 @@ Blockly.Language.text_create_join_container = {
   }
 };
 
-Blockly.Language.text_create_join_item = {
+Blockly.Blocks.text_create_join_item = {
   // Add items.
   init: function() {
     this.setColour(160);
@@ -163,7 +163,7 @@ Blockly.Language.text_create_join_item = {
   }
 };
 
-Blockly.Language.text_append = {
+Blockly.Blocks.text_append = {
   // Append to a variable in place.
   category: Blockly.LANG_CATEGORY_TEXT,
   helpUrl: Blockly.LANG_TEXT_APPEND_HELPURL,
@@ -193,7 +193,7 @@ Blockly.Language.text_append = {
   }
 };
 
-Blockly.Language.text_length = {
+Blockly.Blocks.text_length = {
   // String length.
   category: Blockly.LANG_CATEGORY_TEXT,
   helpUrl: Blockly.LANG_TEXT_LENGTH_HELPURL,
@@ -207,7 +207,7 @@ Blockly.Language.text_length = {
   }
 };
 
-Blockly.Language.text_isEmpty = {
+Blockly.Blocks.text_isEmpty = {
   // Is the string null?
   category: Blockly.LANG_CATEGORY_TEXT,
   helpUrl: Blockly.LANG_TEXT_ISEMPTY_HELPURL,
@@ -221,7 +221,7 @@ Blockly.Language.text_isEmpty = {
   }
 };
 
-Blockly.Language.text_endString = {
+Blockly.Blocks.text_endString = {
   // Return a leading or trailing substring.
   category: Blockly.LANG_CATEGORY_TEXT,
   helpUrl: Blockly.LANG_TEXT_ENDSTRING_HELPURL,
@@ -240,11 +240,11 @@ Blockly.Language.text_endString = {
   }
 };
 
-Blockly.Language.text_endString.OPERATORS =
+Blockly.Blocks.text_endString.OPERATORS =
     [[Blockly.LANG_TEXT_ENDSTRING_OPERATOR_FIRST, 'FIRST'],
      [Blockly.LANG_TEXT_ENDSTRING_OPERATOR_LAST, 'LAST']];
 
-Blockly.Language.text_indexOf = {
+Blockly.Blocks.text_indexOf = {
   // Find a substring in the text.
   category: Blockly.LANG_CATEGORY_TEXT,
   helpUrl: Blockly.LANG_TEXT_INDEXOF_HELPURL,
@@ -264,11 +264,11 @@ Blockly.Language.text_indexOf = {
   }
 };
 
-Blockly.Language.text_indexOf.OPERATORS =
+Blockly.Blocks.text_indexOf.OPERATORS =
     [[Blockly.LANG_TEXT_INDEXOF_OPERATOR_FIRST, 'FIRST'],
      [Blockly.LANG_TEXT_INDEXOF_OPERATOR_LAST, 'LAST']];
 
-Blockly.Language.text_charAt = {
+Blockly.Blocks.text_charAt = {
   // Get a character from the string.
   category: Blockly.LANG_CATEGORY_TEXT,
   helpUrl: Blockly.LANG_TEXT_CHARAT_HELPURL,
@@ -286,7 +286,7 @@ Blockly.Language.text_charAt = {
   }
 };
 
-Blockly.Language.text_changeCase = {
+Blockly.Blocks.text_changeCase = {
   // Change capitalization.
   category: Blockly.LANG_CATEGORY_TEXT,
   helpUrl: Blockly.LANG_TEXT_CHANGECASE_HELPURL,
@@ -301,12 +301,12 @@ Blockly.Language.text_changeCase = {
   }
 };
 
-Blockly.Language.text_changeCase.OPERATORS =
+Blockly.Blocks.text_changeCase.OPERATORS =
     [[Blockly.LANG_TEXT_CHANGECASE_OPERATOR_UPPERCASE, 'UPPERCASE'],
      [Blockly.LANG_TEXT_CHANGECASE_OPERATOR_LOWERCASE, 'LOWERCASE'],
      [Blockly.LANG_TEXT_CHANGECASE_OPERATOR_TITLECASE, 'TITLECASE']];
 
-Blockly.Language.text_trim = {
+Blockly.Blocks.text_trim = {
   // Trim spaces.
   category: Blockly.LANG_CATEGORY_TEXT,
   helpUrl: Blockly.LANG_TEXT_TRIM_HELPURL,
@@ -342,12 +342,12 @@ Blockly.Language.text_trim = {
   }
 };
 
-Blockly.Language.text_trim.OPERATORS =
+Blockly.Blocks.text_trim.OPERATORS =
     [[Blockly.LANG_TEXT_TRIM_OPERATOR_BOTH, 'BOTH'],
      [Blockly.LANG_TEXT_TRIM_OPERATOR_LEFT, 'LEFT'],
      [Blockly.LANG_TEXT_TRIM_OPERATOR_RIGHT, 'RIGHT']];
 
-Blockly.Language.text_print = {
+Blockly.Blocks.text_print = {
   // Print statement.
   category: Blockly.LANG_CATEGORY_TEXT,
   helpUrl: Blockly.LANG_TEXT_PRINT_HELPURL,
@@ -361,7 +361,7 @@ Blockly.Language.text_print = {
   }
 };
 
-Blockly.Language.text_prompt = {
+Blockly.Blocks.text_prompt = {
   // Prompt function.
   category: Blockly.LANG_CATEGORY_TEXT,
   helpUrl: Blockly.LANG_TEXT_PROMPT_HELPURL,
@@ -381,6 +381,6 @@ Blockly.Language.text_prompt = {
   }
 };
 
-Blockly.Language.text_prompt.TYPES =
+Blockly.Blocks.text_prompt.TYPES =
     [[Blockly.LANG_TEXT_PROMPT_TYPE_TEXT, 'TEXT'],
      [Blockly.LANG_TEXT_PROMPT_TYPE_NUMBER, 'NUMBER']];

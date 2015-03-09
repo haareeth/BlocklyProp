@@ -23,7 +23,7 @@
  */
 'use strict';
 
-Blockly.Language.logic_compare = {
+Blockly.Blocks.logic_compare = {
   // Comparison operator.
   category: Blockly.LANG_CATEGORY_LOGIC,
   helpUrl: Blockly.LANG_LOGIC_COMPARE_HELPURL,
@@ -43,7 +43,7 @@ Blockly.Language.logic_compare = {
   }
 };
 
-Blockly.Language.logic_compare.OPERATORS =
+Blockly.Blocks.logic_compare.OPERATORS =
     [['=', 'EQ'],
      ['\u2260', 'NEQ'],
      ['<', 'LT'],
@@ -51,7 +51,7 @@ Blockly.Language.logic_compare.OPERATORS =
      ['>', 'GT'],
      ['\u2265', 'GTE']];
 
-Blockly.Language.logic_compare.TOOLTIPS = {
+Blockly.Blocks.logic_compare.TOOLTIPS = {
   EQ: Blockly.LANG_LOGIC_COMPARE_TOOLTIP_EQ,
   NEQ: Blockly.LANG_LOGIC_COMPARE_TOOLTIP_NEQ,
   LT: Blockly.LANG_LOGIC_COMPARE_TOOLTIP_LT,
@@ -60,7 +60,7 @@ Blockly.Language.logic_compare.TOOLTIPS = {
   GTE: Blockly.LANG_LOGIC_COMPARE_TOOLTIP_GTE
 };
 
-Blockly.Language.logic_operation = {
+Blockly.Blocks.logic_operation = {
   // Logical operations: 'and', 'or'.
   category: Blockly.LANG_CATEGORY_LOGIC,
   helpUrl: Blockly.LANG_LOGIC_OPERATION_HELPURL,
@@ -82,16 +82,16 @@ Blockly.Language.logic_operation = {
   }
 };
 
-Blockly.Language.logic_operation.OPERATORS =
+Blockly.Blocks.logic_operation.OPERATORS =
     [[Blockly.LANG_LOGIC_OPERATION_AND, 'AND'],
      [Blockly.LANG_LOGIC_OPERATION_OR, 'OR']];
 
-Blockly.Language.logic_operation.TOOLTIPS = {
+Blockly.Blocks.logic_operation.TOOLTIPS = {
   AND: Blockly.LANG_LOGIC_OPERATION_TOOLTIP_AND,
   OR: Blockly.LANG_LOGIC_OPERATION_TOOLTIP_OR
 };
 
-Blockly.Language.logic_negate = {
+Blockly.Blocks.logic_negate = {
   // Negation.
   category: Blockly.LANG_CATEGORY_LOGIC,
   helpUrl: Blockly.LANG_LOGIC_NEGATE_HELPURL,
@@ -105,7 +105,7 @@ Blockly.Language.logic_negate = {
   }
 };
 
-Blockly.Language.logic_boolean = {
+Blockly.Blocks.logic_boolean = {
   // Boolean data type: true and false.
   category: Blockly.LANG_CATEGORY_LOGIC,
   helpUrl: Blockly.LANG_LOGIC_BOOLEAN_HELPURL,
@@ -118,11 +118,11 @@ Blockly.Language.logic_boolean = {
   }
 };
 
-Blockly.Language.logic_boolean.OPERATORS =
+Blockly.Blocks.logic_boolean.OPERATORS =
     [[Blockly.LANG_LOGIC_BOOLEAN_TRUE, 'TRUE'],
      [Blockly.LANG_LOGIC_BOOLEAN_FALSE, 'FALSE']];
 
-Blockly.Language.logic_null = {
+Blockly.Blocks.logic_null = {
   // Null data type.
   category: Blockly.LANG_CATEGORY_LOGIC,
   helpUrl: Blockly.LANG_LOGIC_NULL_HELPURL,

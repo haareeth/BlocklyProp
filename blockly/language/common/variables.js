@@ -23,7 +23,7 @@
  */
 'use strict';
 
-Blockly.Language.variables_get = {
+Blockly.Blocks.variables_get = {
     // Variable getter.
     category: null, // Variables are handled specially.
     helpUrl: Blockly.LANG_VARIABLES_GET_HELPURL,
@@ -46,7 +46,7 @@ Blockly.Language.variables_get = {
     }
 };
 
-Blockly.Language.variables_set = {
+Blockly.Blocks.variables_set = {
     // Variable setter.
     category: null, // Variables are handled specially.
     helpUrl: Blockly.LANG_VARIABLES_SET_HELPURL,

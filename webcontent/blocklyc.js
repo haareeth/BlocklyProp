@@ -99,7 +99,7 @@ function renderContent() {
     } else if (content.id == 'content_propc') {
         //content.innerHTML = Blockly.Generator.workspaceToCode('Arduino');
         var spinTextarea = document.getElementById('textarea_propc');
-        spinTextarea.value = Blockly.Generator.workspaceToCode('propc');
+        spinTextarea.value = Blockly.propc.workspaceToCode();
         spinTextarea.focus();
     }
 }

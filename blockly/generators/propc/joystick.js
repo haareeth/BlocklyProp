@@ -23,12 +23,12 @@
 'use strict';
 
 
-if ( !Blockly.Language )
-    Blockly.Language = {};
+if ( !Blockly.Blocks )
+    Blockly.Blocks = {};
 
 
 //Joystick block
-Blockly.Language.joystick_input_yaxis = {
+Blockly.Blocks.joystick_input_yaxis = {
     category: 'Sensors',
     helpUrl: '',
     init: function() {
@@ -42,7 +42,7 @@ Blockly.Language.joystick_input_yaxis = {
 };
 
 //Joystick block
-Blockly.Language.joystick_input_xaxis = {
+Blockly.Blocks.joystick_input_xaxis = {
     category: 'Sensors',
     helpUrl: '',
     init: function() {
@@ -56,7 +56,7 @@ Blockly.Language.joystick_input_xaxis = {
 };
 
 //Define generators
-Blockly.propc = Blockly.Generator.get( 'propc' );
+//Blockly.propc = new Blockly.Generator( 'propc' );
 
 Blockly.propc.joystick_input_yaxis = function() {
     var pin_number_yaxis = this.getTitleValue( 'PINY' );

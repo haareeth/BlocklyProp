@@ -24,11 +24,11 @@
 'use strict';
 
 //define blocks
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
 
-Blockly.Language.file_open = {
+Blockly.Blocks.file_open = {
     category: 'File',
     helpUrl: '',
     init: function() {
@@ -42,7 +42,7 @@ Blockly.Language.file_open = {
     }
 };
 
-Blockly.Language.file_close = {
+Blockly.Blocks.file_close = {
     category: 'File',
     helpUrl: '',
     init: function() {
@@ -58,7 +58,7 @@ Blockly.Language.file_close = {
 
 
 // define generators
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.file_open = function() {
     var file = this.getTitleValue('FILE');

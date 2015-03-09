@@ -25,12 +25,12 @@
 
 
 //define blocks
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
 
 //servo block
-Blockly.Language.servo_move = {
+Blockly.Blocks.servo_move = {
     category: 'Servo',
     helpUrl: '',
     init: function() {
@@ -49,7 +49,7 @@ Blockly.Language.servo_move = {
 };
 
 // define generators
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.servo_move = function() {
     var dropdown_pin = this.getTitleValue('PIN');

@@ -21,11 +21,11 @@
 */
 'use strict';
 
-if ( !Blockly.Language )
-  Blockly.Language = {};
+if ( !Blockly.Blocks )
+  Blockly.Blocks = {};
 
 //Create GUI blocks for SF02 Laser Rangefinder
-Blockly.Language.SF02_Laser_Rangefinder = {
+Blockly.Blocks.SF02_Laser_Rangefinder = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -38,7 +38,7 @@ Blockly.Language.SF02_Laser_Rangefinder = {
 };
 
 //Get generator
-Blockly.propc = Blockly.Generator.get( 'propc' );
+//Blockly.propc = new Blockly.Generator( 'propc' );
 
 //Create code for blocks
 Blockly.propc.SF02_Laser_Rangefinder = function() {

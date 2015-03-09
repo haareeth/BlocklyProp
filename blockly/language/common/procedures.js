@@ -23,7 +23,7 @@
  */
 'use strict';
 
-Blockly.Language.procedures_defnoreturn = {
+Blockly.Blocks.procedures_defnoreturn = {
     // Define a procedure with no return value.
     category: null, // Procedures are handled specially.
     helpUrl: Blockly.LANG_PROCEDURES_DEFNORETURN_HELPURL,
@@ -156,7 +156,7 @@ Blockly.Language.procedures_defnoreturn = {
     }
 };
 
-Blockly.Language.procedures_defreturn = {
+Blockly.Blocks.procedures_defreturn = {
     // Define a procedure with a return value.
     category: null, // Procedures are handled specially.
     helpUrl: Blockly.LANG_PROCEDURES_DEFRETURN_HELPURL,
@@ -177,23 +177,23 @@ Blockly.Language.procedures_defreturn = {
         this.setTooltip(Blockly.LANG_PROCEDURES_DEFRETURN_TOOLTIP);
         this.arguments_ = [];
     },
-    updateParams_: Blockly.Language.procedures_defnoreturn.updateParams_,
-    mutationToDom: Blockly.Language.procedures_defnoreturn.mutationToDom,
-    domToMutation: Blockly.Language.procedures_defnoreturn.domToMutation,
-    decompose: Blockly.Language.procedures_defnoreturn.decompose,
-    compose: Blockly.Language.procedures_defnoreturn.compose,
-    dispose: Blockly.Language.procedures_defnoreturn.dispose,
+    updateParams_: Blockly.Blocks.procedures_defnoreturn.updateParams_,
+    mutationToDom: Blockly.Blocks.procedures_defnoreturn.mutationToDom,
+    domToMutation: Blockly.Blocks.procedures_defnoreturn.domToMutation,
+    decompose: Blockly.Blocks.procedures_defnoreturn.decompose,
+    compose: Blockly.Blocks.procedures_defnoreturn.compose,
+    dispose: Blockly.Blocks.procedures_defnoreturn.dispose,
     getProcedureDef: function() {
         // Return the name of the defined procedure,
         // a list of all its arguments,
         // and that it DOES have a return value.
         return [this.getTitleValue('NAME'), this.arguments_, true];
     },
-    getVars: Blockly.Language.procedures_defnoreturn.getVars,
-    renameVar: Blockly.Language.procedures_defnoreturn.renameVar
+    getVars: Blockly.Blocks.procedures_defnoreturn.getVars,
+    renameVar: Blockly.Blocks.procedures_defnoreturn.renameVar
 };
 
-Blockly.Language.procedures_mutatorcontainer = {
+Blockly.Blocks.procedures_mutatorcontainer = {
     // Procedure container (for mutator dialog).
     init: function() {
         this.setColour(290);
@@ -205,14 +205,14 @@ Blockly.Language.procedures_mutatorcontainer = {
     }
 };
 
-Blockly.Language.procedures_mutatorarg = {
+Blockly.Blocks.procedures_mutatorarg = {
     // Procedure argument (for mutator dialog).
     init: function() {
         this.setColour(290);
         this.appendDummyInput()
                 .appendTitle(Blockly.LANG_PROCEDURES_MUTATORARG_TITLE)
                 .appendTitle(new Blockly.FieldTextInput('x',
-                        Blockly.Language.procedures_mutatorarg.validator), 'NAME');
+                        Blockly.Blocks.procedures_mutatorarg.validator), 'NAME');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setTooltip('');
@@ -220,14 +220,14 @@ Blockly.Language.procedures_mutatorarg = {
     }
 };
 
-Blockly.Language.procedures_mutatorarg.validator = function(newVar) {
+Blockly.Blocks.procedures_mutatorarg.validator = function(newVar) {
     // Merge runs of whitespace.  Strip leading and trailing whitespace.
     // Beyond this, all names are legal.
     newVar = newVar.replace(/[\s\xa0]+/g, ' ').replace(/^ | $/g, '');
     return newVar || null;
 };
 
-Blockly.Language.procedures_callnoreturn = {
+Blockly.Blocks.procedures_callnoreturn = {
     // Call a procedure with no return value.
     category: null, // Procedures are handled specially.
     helpUrl: Blockly.LANG_PROCEDURES_CALLNORETURN_HELPURL,
@@ -380,7 +380,7 @@ Blockly.Language.procedures_callnoreturn = {
     }
 };
 
-Blockly.Language.procedures_callreturn = {
+Blockly.Blocks.procedures_callreturn = {
     // Call a procedure with a return value.
     category: null, // Procedures are handled specially.
     helpUrl: Blockly.LANG_PROCEDURES_CALLRETURN_HELPURL,
@@ -395,17 +395,17 @@ Blockly.Language.procedures_callreturn = {
         this.quarkConnections_ = null;
         this.quarkArguments_ = null;
     },
-    getProcedureCall: Blockly.Language.procedures_callnoreturn.getProcedureCall,
-    renameProcedure: Blockly.Language.procedures_callnoreturn.renameProcedure,
+    getProcedureCall: Blockly.Blocks.procedures_callnoreturn.getProcedureCall,
+    renameProcedure: Blockly.Blocks.procedures_callnoreturn.renameProcedure,
     setProcedureParameters:
-            Blockly.Language.procedures_callnoreturn.setProcedureParameters,
-    mutationToDom: Blockly.Language.procedures_callnoreturn.mutationToDom,
-    domToMutation: Blockly.Language.procedures_callnoreturn.domToMutation,
-    renameVar: Blockly.Language.procedures_callnoreturn.renameVar,
-    customContextMenu: Blockly.Language.procedures_callnoreturn.customContextMenu
+            Blockly.Blocks.procedures_callnoreturn.setProcedureParameters,
+    mutationToDom: Blockly.Blocks.procedures_callnoreturn.mutationToDom,
+    domToMutation: Blockly.Blocks.procedures_callnoreturn.domToMutation,
+    renameVar: Blockly.Blocks.procedures_callnoreturn.renameVar,
+    customContextMenu: Blockly.Blocks.procedures_callnoreturn.customContextMenu
 };
 
-Blockly.Language.procedures_ifreturn = {
+Blockly.Blocks.procedures_ifreturn = {
     // Conditionally return value from a procedure.
     category: null,
     helpUrl: 'http://c2.com/cgi/wiki?GuardClause',

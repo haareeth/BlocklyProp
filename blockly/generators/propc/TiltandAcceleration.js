@@ -22,11 +22,11 @@ Author: valetolpegin@gmail.com
 */
 'use strict';
 
-if ( !Blockly.Language )
-  Blockly.Language = {};
+if ( !Blockly.Blocks )
+  Blockly.Blocks = {};
  
 //MX2125 sensor blocks 
-Blockly.Language.MX2125_acceleration_xaxis = {
+Blockly.Blocks.MX2125_acceleration_xaxis = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -40,7 +40,7 @@ Blockly.Language.MX2125_acceleration_xaxis = {
   }
 };
 
-Blockly.Language.MX2125_acceleration_yaxis = {
+Blockly.Blocks.MX2125_acceleration_yaxis = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -55,7 +55,7 @@ Blockly.Language.MX2125_acceleration_yaxis = {
 };
 
 //MMA7455 sensor block
-Blockly.Language.MMA7455_acceleration = {
+Blockly.Blocks.MMA7455_acceleration = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -82,7 +82,7 @@ Blockly.Language.MMA7455_acceleration = {
 };
 
 //Get generators
-Blockly.propc = Blockly.Generator.get( 'propc' );
+//Blockly.propc = new Blockly.Generator( 'propc' );
 
 Blockly.propc.MX2125_acceleration_xaxis = function() {
   var pin = this.getTitleValue( 'PINX' );

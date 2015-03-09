@@ -23,7 +23,7 @@
  */
 'use strict';
 
-Blockly.Language.controls_if = {
+Blockly.Blocks.controls_if = {
     // If/elseif/else condition.
     category: Blockly.LANG_CATEGORY_CONTROLS,
     helpUrl: Blockly.LANG_CONTROLS_IF_HELPURL,
@@ -176,7 +176,7 @@ Blockly.Language.controls_if = {
     }
 };
 
-Blockly.Language.controls_if_if = {
+Blockly.Blocks.controls_if_if = {
     // If condition.
     init: function() {
         this.setColour(120);
@@ -188,7 +188,7 @@ Blockly.Language.controls_if_if = {
     }
 };
 
-Blockly.Language.controls_if_elseif = {
+Blockly.Blocks.controls_if_elseif = {
     // Else-If condition.
     init: function() {
         this.setColour(120);
@@ -201,7 +201,7 @@ Blockly.Language.controls_if_elseif = {
     }
 };
 
-Blockly.Language.controls_if_else = {
+Blockly.Blocks.controls_if_else = {
     // Else condition.
     init: function() {
         this.setColour(120);
@@ -213,7 +213,7 @@ Blockly.Language.controls_if_else = {
     }
 };
 
-Blockly.Language.controls_repeat = {
+Blockly.Blocks.controls_repeat = {
     // Repeat n times.
     category: Blockly.LANG_CATEGORY_CONTROLS,
     helpUrl: Blockly.LANG_CONTROLS_REPEAT_HELPURL,
@@ -222,7 +222,7 @@ Blockly.Language.controls_repeat = {
         this.appendDummyInput()
                 .appendTitle(Blockly.LANG_CONTROLS_REPEAT_TITLE_REPEAT)
                 .appendTitle(new Blockly.FieldTextInput('10',
-                        Blockly.Language.math_number.validator), 'TIMES')
+                        Blockly.FieldTextInput.numberValidator), 'TIMES')
                 .appendTitle(Blockly.LANG_CONTROLS_REPEAT_TITLE_TIMES);
         this.appendStatementInput('DO')
                 .appendTitle(Blockly.LANG_CONTROLS_REPEAT_INPUT_DO);
@@ -232,7 +232,7 @@ Blockly.Language.controls_repeat = {
     }
 };
 
-Blockly.Language.controls_whileUntil = {
+Blockly.Blocks.controls_whileUntil = {
     // Do while/until loop.
     category: Blockly.LANG_CATEGORY_CONTROLS,
     helpUrl: Blockly.LANG_CONTROLS_WHILEUNTIL_HELPURL,
@@ -255,16 +255,16 @@ Blockly.Language.controls_whileUntil = {
     }
 };
 
-Blockly.Language.controls_whileUntil.OPERATORS =
+Blockly.Blocks.controls_whileUntil.OPERATORS =
         [[Blockly.LANG_CONTROLS_WHILEUNTIL_OPERATOR_WHILE, 'WHILE'],
             [Blockly.LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL, 'UNTIL']];
 
-Blockly.Language.controls_whileUntil.TOOLTIPS = {
+Blockly.Blocks.controls_whileUntil.TOOLTIPS = {
     WHILE: Blockly.LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE,
     UNTIL: Blockly.LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL
 };
 
-Blockly.Language.controls_for = {
+Blockly.Blocks.controls_for = {
     // For loop.
     category: Blockly.LANG_CATEGORY_CONTROLS,
     helpUrl: Blockly.LANG_CONTROLS_FOR_HELPURL,
@@ -303,7 +303,7 @@ Blockly.Language.controls_for = {
     }
 };
 
-Blockly.Language.controls_forEach = {
+Blockly.Blocks.controls_forEach = {
     // For each loop.
     category: Blockly.LANG_CATEGORY_CONTROLS,
     helpUrl: Blockly.LANG_CONTROLS_FOREACH_HELPURL,
@@ -335,7 +335,7 @@ Blockly.Language.controls_forEach = {
     }
 };
 
-Blockly.Language.controls_flow_statements = {
+Blockly.Blocks.controls_flow_statements = {
     // Flow statements: continue, break.
     category: Blockly.LANG_CATEGORY_CONTROLS,
     helpUrl: Blockly.LANG_CONTROLS_FLOW_STATEMENTS_HELPURL,
@@ -379,11 +379,11 @@ Blockly.Language.controls_flow_statements = {
     }
 };
 
-Blockly.Language.controls_flow_statements.OPERATORS =
+Blockly.Blocks.controls_flow_statements.OPERATORS =
         [[Blockly.LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK, 'BREAK'],
             [Blockly.LANG_CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE, 'CONTINUE']];
 
-Blockly.Language.controls_flow_statements.TOOLTIPS = {
+Blockly.Blocks.controls_flow_statements.TOOLTIPS = {
     BREAK: Blockly.LANG_CONTROLS_FLOW_STATEMENTS_TOOLTIP_BREAK,
     CONTINUE: Blockly.LANG_CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE
 };

@@ -22,11 +22,11 @@
 
 'use strict';
 
-if ( !Blockly.Language )
-  Blockly.Language = {};
+if ( !Blockly.Blocks )
+  Blockly.Blocks = {};
 
 //Create GUI blocks for PAM-7Q GPS module
-Blockly.Language.PAM_7Q_Init = {
+Blockly.Blocks.PAM_7Q_Init = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -47,7 +47,7 @@ Blockly.Language.PAM_7Q_Init = {
   }
 };
 
-Blockly.Language.PAM_7Q_Latitude = {
+Blockly.Blocks.PAM_7Q_Latitude = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -60,7 +60,7 @@ Blockly.Language.PAM_7Q_Latitude = {
   }
 };
 
-Blockly.Language.PAM_7Q_Longitude = {
+Blockly.Blocks.PAM_7Q_Longitude = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -73,7 +73,7 @@ Blockly.Language.PAM_7Q_Longitude = {
   }
 };
 
-Blockly.Language.PAM_7Q_Heading = {
+Blockly.Blocks.PAM_7Q_Heading = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -86,7 +86,7 @@ Blockly.Language.PAM_7Q_Heading = {
   }
 };
 
-Blockly.Language.PAM_7Q_Altitude = {
+Blockly.Blocks.PAM_7Q_Altitude = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -99,7 +99,7 @@ Blockly.Language.PAM_7Q_Altitude = {
   }
 };
 
-Blockly.Language.PAM_7Q_SatsTracked = {
+Blockly.Blocks.PAM_7Q_SatsTracked = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -112,7 +112,7 @@ Blockly.Language.PAM_7Q_SatsTracked = {
   }
 };
 
-Blockly.Language.PAM_7Q_Velocity = {
+Blockly.Blocks.PAM_7Q_Velocity = {
   category: 'Sensors',
   helpUrl: '',
   init: function() {
@@ -127,7 +127,7 @@ Blockly.Language.PAM_7Q_Velocity = {
 };
 
 //Create code for blocks
-Blockly.propc = Blockly.Generator.get( 'propc' );
+//Blockly.propc = new Blockly.Generator( 'propc' );
 
 Blockly.propc.PAM_7Q_Init = function() {
   var rx_pin = this.getTitleValue( 'RXPIN' );

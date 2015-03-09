@@ -23,10 +23,10 @@
  */
 'use strict';
 
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
-Blockly.Language.controls_repeat_forever = {
+Blockly.Blocks.controls_repeat_forever = {
     // Repeat forever.
     category: Blockly.LANG_CATEGORY_CONTROLS,
     helpUrl: Blockly.LANG_CONTROLS_REPEAT_HELPURL,
@@ -42,7 +42,7 @@ Blockly.Language.controls_repeat_forever = {
     }
 };
 
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.controls_if = function() {
     // If/elseif/else condition.

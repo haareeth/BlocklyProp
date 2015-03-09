@@ -23,7 +23,7 @@
  */
 'use strict';
 
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.procedures_defreturn = function() {
     // Define a procedure with a return value.

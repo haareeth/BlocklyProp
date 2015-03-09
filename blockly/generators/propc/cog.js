@@ -22,11 +22,11 @@
  */
 'use strict';
 
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
 
-Blockly.Language.cog_new = {
+Blockly.Blocks.cog_new = {
     category: 'Control',
     helpUrl: '',
     init: function () {
@@ -45,7 +45,7 @@ Blockly.Language.cog_new = {
 };
 
 //get generators
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.cog_new = function () {
     var method = Blockly.propc.statementToCode(this, 'METHOD');

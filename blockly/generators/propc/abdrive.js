@@ -24,11 +24,11 @@
 'use strict';
 
 //define blocks
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
 
-Blockly.Language.ab_drive_goto = {
+Blockly.Blocks.ab_drive_goto = {
     category: 'Drive',
     helpUrl: '',
     init: function() {
@@ -46,7 +46,7 @@ Blockly.Language.ab_drive_goto = {
     }
 };
 
-Blockly.Language.ab_drive_speed = {
+Blockly.Blocks.ab_drive_speed = {
     category: 'Drive',
     helpUrl: '',
     init: function() {
@@ -66,7 +66,7 @@ Blockly.Language.ab_drive_speed = {
 
 
 // define generators
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.ab_drive_goto = function() {
     var left = Number(this.getTitleValue('LEFT'));

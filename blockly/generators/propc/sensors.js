@@ -24,12 +24,12 @@
 
 
 //define blocks
-if (!Blockly.Language)
-    Blockly.Language = {};
+if (!Blockly.Blocks)
+    Blockly.Blocks = {};
 
 
 //servo block
-Blockly.Language.sensor_ping = {
+Blockly.Blocks.sensor_ping = {
     category: 'Sensors',
     helpUrl: '',
     init: function() {
@@ -44,7 +44,7 @@ Blockly.Language.sensor_ping = {
 };
 
 // define generators
-Blockly.propc = Blockly.Generator.get('propc');
+//Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.sensor_ping = function() {
     var dropdown_pin = this.getTitleValue('PIN');
