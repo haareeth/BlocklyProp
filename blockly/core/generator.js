@@ -72,7 +72,7 @@ Blockly.Generator.prototype.STATEMENT_PREFIX = null;
 Blockly.Generator.prototype.workspaceToCode = function(opt_workspace) {
   var workspace = opt_workspace || Blockly.mainWorkspace;
   var code = [];
-  //this.init(workspace);
+  this.init(workspace);
   var blocks = workspace.getTopBlocks(true);
   for (var x = 0, block; block = blocks[x]; x++) {
     var line = this.blockToCode(block);

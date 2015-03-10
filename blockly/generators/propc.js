@@ -134,7 +134,7 @@ function setProfile(profileName) {
 /**
  * Initialise the database of variable names.
  */
-Blockly.propc.init = function() {
+Blockly.propc.init = function(workspace) {
     // Create a dictionary of definitions to be printed before setups.
     Blockly.propc.definitions_ = {};
     Blockly.propc.definitions_["include simpletools"] = '#include "simpletools.h"';
@@ -156,7 +156,7 @@ Blockly.propc.init = function() {
         }
 
         var defvars = [];
-        var variables = Blockly.Variables.allVariables();
+        var variables = Blockly.Variables.allVariables(workspace);
         for (var x = 0; x < variables.length; x++) {
             var varName = Blockly.propc.variableDB_.getDistinctName(variables[x],
                     Blockly.Variables.NAME_TYPE);
@@ -192,7 +192,7 @@ Blockly.propc.init = function() {
  * @return {string} Completed code.
  */
 Blockly.propc.finish = function(code) {
-
+alert(code);
 
     // Convert the definitions dictionary into a list.
     var imports = [];
