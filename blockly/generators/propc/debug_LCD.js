@@ -66,11 +66,11 @@ Blockly.Blocks.debug_lcd_print = {
         this.setColour( 180 );
         this.appendDummyInput( "" )
                 .appendTitle( "LCD print" )
-                .appendTitle( new Blockly.FieldImage( Blockly.pathToBlockly +
-                        'media/quote0.png', 12, 12 ) )
+                .appendTitle( new Blockly.FieldImage( Blockly.pathToMedia +
+                    'quote0.png', 12, 12 ) )
                 .appendTitle( new Blockly.FieldTextInput( '' ), 'TEXT' )
-                .appendTitle( new Blockly.FieldImage( Blockly.pathToBlockly +
-                        'media/quote1.png', 12, 12 ) );
+                .appendTitle( new Blockly.FieldImage( Blockly.pathToMedia +
+                    'quote1.png', 12, 12 ) );
         this.setPreviousStatement( true, null );
         this.setNextStatement( true, null );
     }

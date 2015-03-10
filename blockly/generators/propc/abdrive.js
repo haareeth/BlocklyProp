@@ -37,10 +37,10 @@ Blockly.Blocks.ab_drive_goto = {
                 .appendTitle('Drive goto')
                 .appendTitle('Left')
                 .appendTitle(new Blockly.FieldTextInput('64',
-                        Blockly.Language.math_number.validator), 'LEFT')
+                        Blockly.FieldTextInput.numberValidator), 'LEFT')
                 .appendTitle('Right')
                 .appendTitle(new Blockly.FieldTextInput('64',
-                        Blockly.Language.math_number.validator), 'RIGHT');
+                        Blockly.FieldTextInput.numberValidator), 'RIGHT');
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
     }
@@ -55,10 +55,10 @@ Blockly.Blocks.ab_drive_speed = {
                 .appendTitle('Drive speed')
                 .appendTitle('Left')
                 .appendTitle(new Blockly.FieldTextInput('64',
-                        Blockly.Language.math_number.validator), 'LEFT')
+                        Blockly.FieldTextInput.numberValidator), 'LEFT')
                 .appendTitle('Right')
                 .appendTitle(new Blockly.FieldTextInput('64',
-                        Blockly.Language.math_number.validator), 'RIGHT');
+                        Blockly.FieldTextInput.numberValidator), 'RIGHT');
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
     }
