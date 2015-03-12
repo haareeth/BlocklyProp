@@ -40,7 +40,7 @@ Blockly.Blocks.servo_move = {
                 .appendTitle("PIN#")
                 .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
         this.appendValueInput("DEGREES", Number)
-                .setCheck(Number)
+                .setCheck('Number')
                 .setAlign(Blockly.ALIGN_RIGHT)
                 .appendTitle("Degrees (0 - 180°)");
         this.setPreviousStatement(true, null);

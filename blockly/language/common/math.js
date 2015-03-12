@@ -54,11 +54,11 @@ Blockly.Blocks['math_arithmetic'] = {
    */
   init: function() {
     var OPERATORS =
-        [[Blockly.Msg.MATH_ADDITION_SYMBOL, 'ADD'],
-         [Blockly.Msg.MATH_SUBTRACTION_SYMBOL, 'MINUS'],
-         [Blockly.Msg.MATH_MULTIPLICATION_SYMBOL, 'MULTIPLY'],
-         [Blockly.Msg.MATH_DIVISION_SYMBOL, 'DIVIDE'],
-         [Blockly.Msg.MATH_POWER_SYMBOL, 'POWER']];
+        [["+", 'ADD'],
+         ["-", 'MINUS'],
+         ["x", 'MULTIPLY'],
+         ["/", 'DIVIDE'],
+         ["^", 'POWER']];
     this.setHelpUrl(Blockly.Msg.MATH_ARITHMETIC_HELPURL);
     this.setColour(Blockly.Blocks.math.HUE);
     this.setOutput(true, 'Number');
@@ -70,7 +70,7 @@ Blockly.Blocks['math_arithmetic'] = {
     this.setInputsInline(true);
     // Assign 'this' to a variable for use in the tooltip closure below.
     var thisBlock = this;
-    this.setTooltip(function() {
+/*    this.setTooltip(function() {
       var mode = thisBlock.getFieldValue('OP');
       var TOOLTIPS = {
         'ADD': Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_ADD,
@@ -80,7 +80,7 @@ Blockly.Blocks['math_arithmetic'] = {
         'POWER': Blockly.Msg.MATH_ARITHMETIC_TOOLTIP_POWER
       };
       return TOOLTIPS[mode];
-    });
+    });*/
   }
 };
 
@@ -91,14 +91,14 @@ Blockly.Blocks['math_single'] = {
    */
   init: function() {
     var OPERATORS =
-        [[Blockly.Msg.MATH_SINGLE_OP_ROOT, 'ROOT'],
-         [Blockly.Msg.MATH_SINGLE_OP_ABSOLUTE, 'ABS'],
+        [['ROOT', 'ROOT'],
+         ['ABS', 'ABS'],
          ['-', 'NEG'],
          ['ln', 'LN'],
          ['log10', 'LOG10'],
          ['e^', 'EXP'],
          ['10^', 'POW10']];
-    this.setHelpUrl(Blockly.Msg.MATH_SINGLE_HELPURL);
+//    this.setHelpUrl(Blockly.Msg.MATH_SINGLE_HELPURL);
     this.setColour(Blockly.Blocks.math.HUE);
     this.setOutput(true, 'Number');
     this.interpolateMsg('%1 %2',
@@ -107,7 +107,7 @@ Blockly.Blocks['math_single'] = {
         Blockly.ALIGN_RIGHT);
     // Assign 'this' to a variable for use in the tooltip closure below.
     var thisBlock = this;
-    this.setTooltip(function() {
+  /*  this.setTooltip(function() {
       var mode = thisBlock.getFieldValue('OP');
       var TOOLTIPS = {
         'ROOT': Blockly.Msg.MATH_SINGLE_TOOLTIP_ROOT,
@@ -119,7 +119,7 @@ Blockly.Blocks['math_single'] = {
         'POW10': Blockly.Msg.MATH_SINGLE_TOOLTIP_POW10
       };
       return TOOLTIPS[mode];
-    });
+    });*/
   }
 };
 
