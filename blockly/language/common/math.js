@@ -43,7 +43,7 @@ Blockly.Blocks['math_number'] = {
         .appendField(new Blockly.FieldTextInput('0',
         Blockly.FieldTextInput.numberValidator), 'NUM');
     this.setOutput(true, 'Number');
-    this.setTooltip(Blockly.Msg.MATH_NUMBER_TOOLTIP);
+    this.setTooltip(""); //Blockly.Msg.MATH_NUMBER_TOOLTIP);
   }
 };
 
@@ -70,6 +70,7 @@ Blockly.Blocks['math_arithmetic'] = {
     this.setInputsInline(true);
     // Assign 'this' to a variable for use in the tooltip closure below.
     var thisBlock = this;
+    this.setTooltip("");
 /*    this.setTooltip(function() {
       var mode = thisBlock.getFieldValue('OP');
       var TOOLTIPS = {
@@ -107,6 +108,7 @@ Blockly.Blocks['math_single'] = {
         Blockly.ALIGN_RIGHT);
     // Assign 'this' to a variable for use in the tooltip closure below.
     var thisBlock = this;
+    this.setTooltip("");
   /*  this.setTooltip(function() {
       var mode = thisBlock.getFieldValue('OP');
       var TOOLTIPS = {
@@ -177,7 +179,8 @@ Blockly.Blocks['math_constant'] = {
     this.setOutput(true, 'Number');
     this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown(CONSTANTS), 'CONSTANT');
-    this.setTooltip(Blockly.Msg.MATH_CONSTANT_TOOLTIP);
+   // this.setTooltip(Blockly.Msg.MATH_CONSTANT_TOOLTIP);
+    this.setTooltip("");
   }
 };
 
@@ -207,7 +210,8 @@ Blockly.Blocks['math_number_property'] = {
         .appendField(dropdown, 'PROPERTY');
     this.setInputsInline(true);
     this.setOutput(true, 'Boolean');
-    this.setTooltip(Blockly.Msg.MATH_IS_TOOLTIP);
+    //this.setTooltip(Blockly.Msg.MATH_IS_TOOLTIP);
+    this.setTooltip("");
   },
   /**
    * Create XML to represent whether the 'divisorInput' should be present.
@@ -268,10 +272,11 @@ Blockly.Blocks['math_change'] = {
     this.setNextStatement(true);
     // Assign 'this' to a variable for use in the tooltip closure below.
     var thisBlock = this;
-    this.setTooltip(function() {
+    /*this.setTooltip(function() {
       return Blockly.Msg.MATH_CHANGE_TOOLTIP.replace('%1',
           thisBlock.getFieldValue('VAR'));
-    });
+    });*/
+    this.setTooltip("");
   },
   /**
    * Return all variables referenced by this block.
@@ -311,7 +316,8 @@ Blockly.Blocks['math_round'] = {
     this.appendValueInput('NUM')
         .setCheck('Number')
         .appendField(new Blockly.FieldDropdown(OPERATORS), 'OP');
-    this.setTooltip(Blockly.Msg.MATH_ROUND_TOOLTIP);
+    //this.setTooltip(Blockly.Msg.MATH_ROUND_TOOLTIP);
+    this.setTooltip("");
   }
 };
 
