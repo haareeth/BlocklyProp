@@ -29,7 +29,7 @@ Blockly.Blocks.move = {
     init: function() {
         this.setColour(120);
         this.appendDummyInput()
-                .appendTitle('Move');
+                .appendField('Move');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setTooltip(Blockly.LANG_CONTROLS_REPEAT_TOOLTIP);
@@ -42,7 +42,7 @@ Blockly.Blocks.line_sensor = {
     init: function() {
         this.setColour(120);
         this.appendDummyInput()
-                .appendTitle('Line sensor').appendTitle(new Blockly.FieldDropdown([["Left", "LEFT"], ["Right", "RIGHT"], ["Either", "EITHER"], ["Both", "BOTH"], ["Neither", "NEITHER"]]), "STAT");
+                .appendField('Line sensor').appendField(new Blockly.FieldDropdown([["Left", "LEFT"], ["Right", "RIGHT"], ["Either", "EITHER"], ["Both", "BOTH"], ["Neither", "NEITHER"]]), "STAT");
         this.setOutput(true, 'boolean');
         this.setTooltip(Blockly.LANG_CONTROLS_REPEAT_TOOLTIP);
     }

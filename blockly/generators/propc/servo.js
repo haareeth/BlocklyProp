@@ -36,13 +36,13 @@ Blockly.Blocks.servo_move = {
     init: function() {
         this.setColour(180);
         this.appendDummyInput("")
-                .appendTitle("Servo")
-                .appendTitle("PIN#")
-                .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN")
+                .appendField("Servo")
+                .appendField("PIN#")
+                .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN")
         this.appendValueInput("DEGREES", Number)
                 .setCheck('Number')
                 .setAlign(Blockly.ALIGN_RIGHT)
-                .appendTitle("Degrees (0 - 180°)");
+                .appendField("Degrees (0 - 180°)");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
     }
@@ -52,7 +52,7 @@ Blockly.Blocks.servo_move = {
 //Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.servo_move = function() {
-    var dropdown_pin = this.getTitleValue('PIN');
+    var dropdown_pin = this.getFieldValue('PIN');
     var degrees = Blockly.propc.valueToCode(this, 'DEGREES', Blockly.propc.ORDER_NONE);
 
     Blockly.propc.definitions_['define_servo'] = '#include "servo.h"';

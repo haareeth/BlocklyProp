@@ -34,10 +34,10 @@ Blockly.Blocks.file_open = {
     init: function() {
         this.setColour(180);
         this.appendDummyInput("")
-            .appendTitle("Open file")
-            .appendTitle(new Blockly.FieldTextInput('file.txt'), 'FILE')
-            .appendTitle("mode")
-            .appendTitle(new Blockly.FieldDropdown([["read", "r"], ["write", "w"]]), "MODE");
+            .appendField("Open file")
+            .appendField(new Blockly.FieldTextInput('file.txt'), 'FILE')
+            .appendField("mode")
+            .appendField(new Blockly.FieldDropdown([["read", "r"], ["write", "w"]]), "MODE");
         this.setOutput(true, 'Pointer');
     }
 };
@@ -48,7 +48,7 @@ Blockly.Blocks.file_close = {
     init: function() {
         this.setColour(180);
         this.appendDummyInput("")
-            .appendTitle("Close file");
+            .appendField("Close file");
         this.appendValueInput('FILE');
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -61,8 +61,8 @@ Blockly.Blocks.file_close = {
 //Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.file_open = function() {
-    var file = this.getTitleValue('FILE');
-    var mode = this.getTitleValue('MODE');
+    var file = this.getFieldValue('FILE');
+    var mode = this.getFieldValue('MODE');
 
  //   Blockly.propc.definitions_["include abdrive"] = '#include "abdrive.h"';
 

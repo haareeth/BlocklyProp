@@ -32,9 +32,9 @@ Blockly.Blocks.PIR_Sensor = {
   init: function() {
     this.setColour( 300 );
     this.appendDummyInput( "" )
-      .appendTitle( "PIR Sensor" )
-      .appendTitle( "Pin" )
-      .appendTitle( new Blockly.FieldDropdown( profile.default.digital ), "PIN" );
+      .appendField( "PIR Sensor" )
+      .appendField( "Pin" )
+      .appendField( new Blockly.FieldDropdown( profile.default.digital ), "PIN" );
     this.setNextStatement( false, null );
     this.setPreviousStatement( false, null ); 
     this.setOutput( true, Number );
@@ -45,7 +45,7 @@ Blockly.Blocks.PIR_Sensor = {
 //Blockly.propc = new Blockly.Generator( 'propc' );
 
 Blockly.propc.PIR_Sensor = function() {
-  var pin = this.getTitleValue( 'PIN' );
+  var pin = this.getFieldValue( 'PIN' );
   
   var code = 'input( ' + pin + ' )';
   return [ code, Blockly.propc.ORDER_ATOMIC ];

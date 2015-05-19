@@ -33,9 +33,9 @@ Blockly.Blocks.controls_repeat_forever = {
     init: function() {
         this.setColour(120);
         this.appendDummyInput()
-                .appendTitle(Blockly.LANG_CONTROLS_REPEAT_TITLE_REPEAT);
+                .appendField(Blockly.LANG_CONTROLS_REPEAT_TITLE_REPEAT);
         this.appendStatementInput('DO')
-                .appendTitle(Blockly.LANG_CONTROLS_REPEAT_INPUT_DO);
+                .appendField(Blockly.LANG_CONTROLS_REPEAT_INPUT_DO);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setTooltip(Blockly.LANG_CONTROLS_REPEAT_TOOLTIP);
@@ -66,7 +66,7 @@ Blockly.propc.controls_if = function() {
 
 Blockly.propc.controls_repeat = function() {
     // Repeat n times.
-    var repeats = Number(this.getTitleValue('TIMES'));
+    var repeats = Number(this.getFieldValue('TIMES'));
     var branch = Blockly.propc.statementToCode(this, 'DO');
     if (Blockly.propc.INFINITE_LOOP_TRAP) {
         branch = Blockly.propc.INFINITE_LOOP_TRAP.replace(/%1/g,

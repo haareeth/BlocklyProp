@@ -32,16 +32,16 @@ Blockly.Blocks.PAM_7Q_Init = {
   init: function() {
     this.setColour( 300 );
     this.appendDummyInput( "" )
-      .appendTitle( "PAM7Q GPS Module" );
+      .appendField( "PAM7Q GPS Module" );
     this.appendDummyInput( "" )
-      .appendTitle( "RX pin#" )
-      .appendTitle( new Blockly.FieldDropdown( profile.default.digital ), "RXPIN" );
+      .appendField( "RX pin#" )
+      .appendField( new Blockly.FieldDropdown( profile.default.digital ), "RXPIN" );
     this.appendDummyInput( "" )
-      .appendTitle( "TX pin#" )
-      .appendTitle( new Blockly.FieldDropdown( profile.default.digital ), "TXPIN" );
+      .appendField( "TX pin#" )
+      .appendField( new Blockly.FieldDropdown( profile.default.digital ), "TXPIN" );
     this.appendDummyInput( "" )
-      .appendTitle( "Baud" )
-      .appendTitle( new Blockly.FieldDropdown( [[ "2400", "2400" ], [ "9600", "9600" ], [ "19200", "19200" ]] ), "BAUD" );
+      .appendField( "Baud" )
+      .appendField( new Blockly.FieldDropdown( [[ "2400", "2400" ], [ "9600", "9600" ], [ "19200", "19200" ]] ), "BAUD" );
     this.setNextStatement( true, null );
     this.setPreviousStatement( true, null ); 
   }
@@ -53,7 +53,7 @@ Blockly.Blocks.PAM_7Q_Latitude = {
   init: function() {
     this.setColour( 300 );
     this.appendDummyInput( "" )
-      .appendTitle( "Get latitude" );
+      .appendField( "Get latitude" );
     this.setOutput( true, Number );
     this.setPreviousStatement( false, null );
     this.setNextStatement( false, null );
@@ -66,7 +66,7 @@ Blockly.Blocks.PAM_7Q_Longitude = {
   init: function() {
     this.setColour( 300 );
     this.appendDummyInput( "" )
-      .appendTitle( "Get longitude" );
+      .appendField( "Get longitude" );
     this.setOutput( true, Number );
     this.setPreviousStatement( false, null );
     this.setNextStatement( false, null );
@@ -79,7 +79,7 @@ Blockly.Blocks.PAM_7Q_Heading = {
   init: function() {
     this.setColour( 300 );
     this.appendDummyInput( "" )
-      .appendTitle( "Get heading" );
+      .appendField( "Get heading" );
     this.setOutput( true, Number );
     this.setPreviousStatement( false, null );
     this.setNextStatement( false, null );
@@ -92,7 +92,7 @@ Blockly.Blocks.PAM_7Q_Altitude = {
   init: function() {
     this.setColour( 300 );
     this.appendDummyInput( "" )
-      .appendTitle( "Get altitude" );
+      .appendField( "Get altitude" );
     this.setOutput( true, Number );
     this.setPreviousStatement( false, null );
     this.setNextStatement( false, null );
@@ -105,7 +105,7 @@ Blockly.Blocks.PAM_7Q_SatsTracked = {
   init: function() {
     this.setColour( 300 );
     this.appendDummyInput( "" )
-      .appendTitle( "Get # of satellites tracked" );
+      .appendField( "Get # of satellites tracked" );
     this.setOutput( true, Number );
     this.setPreviousStatement( false, null );
     this.setNextStatement( false, null );
@@ -118,8 +118,8 @@ Blockly.Blocks.PAM_7Q_Velocity = {
   init: function() {
     this.setColour( 300 );
     this.appendDummyInput( "" )
-      .appendTitle( "Get velocity in units" )
-      .appendTitle( new Blockly.FieldDropdown( [[ "MPH", "MPH" ], [ "KNOTS", "KNOTS" ]] ), "VELOCITYUNITS" );
+      .appendField( "Get velocity in units" )
+      .appendField( new Blockly.FieldDropdown( [[ "MPH", "MPH" ], [ "KNOTS", "KNOTS" ]] ), "VELOCITYUNITS" );
     this.setNextStatement( false, null );
     this.setPreviousStatement( false, null );
     this.setOutput( true, Number );
@@ -130,9 +130,9 @@ Blockly.Blocks.PAM_7Q_Velocity = {
 //Blockly.propc = new Blockly.Generator( 'propc' );
 
 Blockly.propc.PAM_7Q_Init = function() {
-  var rx_pin = this.getTitleValue( 'RXPIN' );
-  var tx_pin = this.getTitleValue( 'TXPIN' );
-  var baud = this.getTitleValue( 'BAUD' );
+  var rx_pin = this.getFieldValue( 'RXPIN' );
+  var tx_pin = this.getFieldValue( 'TXPIN' );
+  var baud = this.getFieldValue( 'BAUD' );
   
   Blockly.propc.definitions_[ "include PAM7Q" ] = '#include "gps.h"';
   
@@ -176,7 +176,7 @@ Blockly.propc.PAM_7Q_SatsTracked = function() {
 };
 
 Blockly.propc.PAM_7Q_Velocity = function() {
-  var velocity_units = this.getTitleValue( 'VELOCITYUNITS' );
+  var velocity_units = this.getFieldValue( 'VELOCITYUNITS' );
   
   Blockly.propc.definitions_[ "include PAM7Q" ] = '#include "gps.h"';
   

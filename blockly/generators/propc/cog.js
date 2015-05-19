@@ -32,12 +32,12 @@ Blockly.Blocks.cog_new = {
     init: function () {
         this.setColour(120);
         this.appendDummyInput()
-            .appendTitle("cognew");
+            .appendField("cognew");
         this.appendValueInput("STACK_SIZE", Number)
-            .appendTitle("Stacksize")
+            .appendField("Stacksize")
             .setCheck(Number);
         this.appendStatementInput("METHOD")
-            .appendTitle("Method");
+            .appendField("Method");
         this.setInputsInline(true);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);

@@ -37,7 +37,7 @@ if (!Blockly.Blocks)
 
 Blockly.propc['math_number'] = function() {
     // Numeric value.
-    var code = window.parseFloat(this.getTitleValue('NUM'));
+    var code = window.parseFloat(this.getFieldValue('NUM'));
     // -4.abs() returns -4 in Dart due to strange order of operation choices.
     // -4 is actually an operator and a number.  Reflect this in the order.
     var order = code < 0 ?
@@ -48,7 +48,7 @@ Blockly.propc['math_number'] = function() {
 
 Blockly.propc.math_arithmetic = function() {
     // Basic arithmetic operators, and power.
-    var mode = this.getTitleValue('OP');
+    var mode = this.getFieldValue('OP');
     var tuple = Blockly.propc.math_arithmetic.OPERATORS[mode];
     var operator = tuple[0];
     var order = tuple[1];
@@ -76,7 +76,7 @@ Blockly.propc.math_arithmetic.OPERATORS = {
 
 Blockly.propc.math_single = function() {
     // Math operators with single operand.
-    var operator = this.getTitleValue('OP');
+    var operator = this.getFieldValue('OP');
     var code;
     var arg;
     if (operator == 'NEG') {
@@ -129,7 +129,7 @@ Blockly.Blocks.math_limit = {
                 .setCheck(Number);
         this.appendValueInput('B')
                 .setCheck(Number)
-                .appendTitle(new Blockly.FieldDropdown(this.OPERATORS), 'OP');
+                .appendField(new Blockly.FieldDropdown(this.OPERATORS), 'OP');
         this.setInputsInline(true);
         this.setTooltip("Limit");
     }
@@ -141,7 +141,7 @@ Blockly.Blocks.math_limit.OPERATORS =
 
 Blockly.propc.math_limit = function() {
     // Basic arithmetic operators, and power.
-    var mode = this.getTitleValue('OP');
+    var mode = this.getFieldValue('OP');
     var tuple = Blockly.propc.math_limit.OPERATORS[mode];
     var operator = tuple[0];
     var order = tuple[1];
@@ -174,7 +174,7 @@ Blockly.Blocks.math_crement = {
 
         this.appendValueInput('VAR')
                 .setCheck(Number)
-                .appendTitle(new Blockly.FieldDropdown(this.OPERATORS), 'OP');
+                .appendField(new Blockly.FieldDropdown(this.OPERATORS), 'OP');
         this.setTooltip("");
     }
 };
@@ -185,7 +185,7 @@ Blockly.Blocks.math_crement.OPERATORS =
 
 Blockly.propc.math_crement = function() {
     // Basic arithmetic operators, and power.
-    var mode = this.getTitleValue('OP');
+    var mode = this.getFieldValue('OP');
     var tuple = Blockly.propc.math_crement.OPERATORS[mode];
     var operator = tuple[0];
     var order = tuple[1];

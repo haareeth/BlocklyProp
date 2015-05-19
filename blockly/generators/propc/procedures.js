@@ -27,7 +27,7 @@
 
 Blockly.propc.procedures_defreturn = function() {
     // Define a procedure with a return value.
-    var funcName = Blockly.propc.variableDB_.getName(this.getTitleValue('NAME'),
+    var funcName = Blockly.propc.variableDB_.getName(this.getFieldValue('NAME'),
             Blockly.Procedures.NAME_TYPE);
     var branch = Blockly.propc.statementToCode(this, 'STACK');
     if (Blockly.propc.INFINITE_LOOP_TRAP) {
@@ -64,7 +64,7 @@ Blockly.propc.procedures_defnoreturn = Blockly.propc.procedures_defreturn;
 
 Blockly.propc.procedures_callreturn = function() {
     // Call a procedure with a return value.
-    var funcName = Blockly.propc.variableDB_.getName(this.getTitleValue('NAME'),
+    var funcName = Blockly.propc.variableDB_.getName(this.getFieldValue('NAME'),
             Blockly.Procedures.NAME_TYPE);
     var args = [];
     for (var x = 0; x < this.arguments_.length; x++) {
@@ -77,7 +77,7 @@ Blockly.propc.procedures_callreturn = function() {
 
 Blockly.propc.procedures_callnoreturn = function() {
     // Call a procedure with no return value.
-    var funcName = Blockly.propc.variableDB_.getName(this.getTitleValue('NAME'),
+    var funcName = Blockly.propc.variableDB_.getName(this.getFieldValue('NAME'),
             Blockly.Procedures.NAME_TYPE);
     var args = [];
     for (var x = 0; x < this.arguments_.length; x++) {

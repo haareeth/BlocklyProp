@@ -31,8 +31,8 @@ Blockly.Blocks.SF02_Laser_Rangefinder = {
   init: function() {
     this.setColour( 300 );
     this.appendDummyInput( "" )
-      .appendTitle( "SF02 Laser Rangefinder Pin" )
-      .appendTitle( new Blockly.FieldDropdown( profile.default.digital ), "PIN" );
+      .appendField( "SF02 Laser Rangefinder Pin" )
+      .appendField( new Blockly.FieldDropdown( profile.default.digital ), "PIN" );
     this.setOutput( true, Number );
   }
 };
@@ -42,7 +42,7 @@ Blockly.Blocks.SF02_Laser_Rangefinder = {
 
 //Create code for blocks
 Blockly.propc.SF02_Laser_Rangefinder = function() {
-  var pin = this.getTitleValue( 'PIN' );
+  var pin = this.getFieldValue( 'PIN' );
   
   Blockly.propc.definitions_[ "include abvolt" ] = '#include "abvolts.h"';
   Blockly.propc.setups_['setup_abvolt'] = 'ad_init(21, 20, 19, 18);';

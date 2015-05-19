@@ -31,20 +31,20 @@ Blockly.Blocks.etape_rc_time = {
   init: function() {
     this.setColour( 300 );
     this.appendDummyInput( "" )
-      .appendTitle( "ETape sensor rc_time input" )
-      .appendTitle( "Pin" )
-      .appendTitle( new Blockly.FieldDropdown( profile.default.digital ), "PIN" );
+      .appendField( "ETape sensor rc_time input" )
+      .appendField( "Pin" )
+      .appendField( new Blockly.FieldDropdown( profile.default.digital ), "PIN" );
     this.appendDummyInput( "" )
-      .appendTitle( "Put input value in" )
-      .appendTitle( new Blockly.FieldVariable( Blockly.LANG_VARIABLES_GET_ITEM ), 'VAR' );
+      .appendField( "Put input value in" )
+      .appendField( new Blockly.FieldVariable( Blockly.LANG_VARIABLES_GET_ITEM ), 'VAR' );
     this.setNextStatement( true, null );
     this.setPreviousStatement( true, null );
   },
   getVars: function() {
-    return [this.getTitleValue('VAR')];
+    return [this.getFieldValue('VAR')];
   },
   renameVar: function(oldName, newName) {
-    if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
       this.setTitleValue(newName, 'VAR');
     }
   }
@@ -56,9 +56,9 @@ Blockly.Blocks.etape_voltage_input = {
   init: function() {
     this.setColour( 300 );
     this.appendDummyInput( "" )
-      .appendTitle( "ETape sensor voltage input" )
-      .appendTitle( "Pin" )
-      .appendTitle( new Blockly.FieldDropdown( profile.default.digital ), "PIN" );
+      .appendField( "ETape sensor voltage input" )
+      .appendField( "Pin" )
+      .appendField( new Blockly.FieldDropdown( profile.default.digital ), "PIN" );
     this.setNextStatement( false, null );
     this.setPreviousStatement( false, null ); 
     this.setOutput( true, Number );
@@ -70,15 +70,15 @@ Blockly.Blocks.etape_voltage_input = {
 
 //Create code for blocks
 Blockly.propc.etape_rc_time = function() {
-  var pin = this.getTitleValue( 'PIN' );
-  var inputStorage = Blockly.propc.variableDB_.getName( this.getTitleValue( 'VAR' ), Blockly.Variables.NAME_TYPE );
+  var pin = this.getFieldValue( 'PIN' );
+  var inputStorage = Blockly.propc.variableDB_.getName( this.getFieldValue( 'VAR' ), Blockly.Variables.NAME_TYPE );
   
   var code = 'high( ' + pin + ' );\npause( 1 );\n' + inputStorage + ' = ' + 'rc_time( ' + pin + ', 1 );\n';
   return [ code, Blockly.propc.ORDER_ATOMIC ];
 };
 
 Blockly.propc.etape_voltage_input = function() {
-  var pin = this.getTitleValue( 'PIN' );
+  var pin = this.getFieldValue( 'PIN' );
   
   Blockly.propc.setups_[ "include abvolt" ] = 'ad_init( 21, 20, 19, 18 );\n';
   

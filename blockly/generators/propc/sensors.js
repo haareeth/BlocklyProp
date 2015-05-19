@@ -35,10 +35,10 @@ Blockly.Blocks.sensor_ping = {
     init: function() {
         this.setColour(314);
         this.appendDummyInput("")
-                .appendTitle("Ping)))")
-                .appendTitle(new Blockly.FieldDropdown([["inches", "INCHES"], ["cm", "CM"], ["ticks", "TICKS"]]), "UNIT")
-                .appendTitle("PIN#")
-                .appendTitle(new Blockly.FieldDropdown(profile.default.digital), "PIN");
+                .appendField("Ping)))")
+                .appendField(new Blockly.FieldDropdown([["inches", "INCHES"], ["cm", "CM"], ["ticks", "TICKS"]]), "UNIT")
+                .appendField("PIN#")
+                .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
         this.setOutput(true, Number);
     }
 };
@@ -47,8 +47,8 @@ Blockly.Blocks.sensor_ping = {
 //Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.sensor_ping = function() {
-    var dropdown_pin = this.getTitleValue('PIN');
-    var unit = this.getTitleValue('UNIT');
+    var dropdown_pin = this.getFieldValue('PIN');
+    var unit = this.getFieldValue('UNIT');
     var methodForUnit = Blockly.propc.sensor_ping.UNITS[unit];
 
     Blockly.propc.definitions_["include ping"] = '#include "ping.h"';

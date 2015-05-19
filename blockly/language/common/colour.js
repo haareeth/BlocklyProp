@@ -30,7 +30,7 @@ Blockly.Blocks.colour_picker = {
   init: function() {
     this.setColour(20);
     this.appendDummyInput()
-        .appendTitle(new Blockly.FieldColour('#ff0000'), 'COLOUR');
+        .appendField(new Blockly.FieldColour('#ff0000'), 'COLOUR');
     this.setOutput(true, 'Colour');
     this.setTooltip(Blockly.LANG_COLOUR_PICKER_TOOLTIP);
   }
@@ -45,16 +45,16 @@ Blockly.Blocks.colour_rgb = {
     this.appendValueInput('RED')
         .setCheck(Number)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(Blockly.LANG_COLOUR_RGB_TITLE)
-        .appendTitle(Blockly.LANG_COLOUR_RGB_RED);
+        .appendField(Blockly.LANG_COLOUR_RGB_TITLE)
+        .appendField(Blockly.LANG_COLOUR_RGB_RED);
     this.appendValueInput('GREEN')
         .setCheck(Number)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(Blockly.LANG_COLOUR_RGB_GREEN);
+        .appendField(Blockly.LANG_COLOUR_RGB_GREEN);
     this.appendValueInput('BLUE')
         .setCheck(Number)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(Blockly.LANG_COLOUR_RGB_BLUE);
+        .appendField(Blockly.LANG_COLOUR_RGB_BLUE);
     this.setOutput(true, 'Colour');
     this.setTooltip(Blockly.LANG_COLOUR_RGB_TOOLTIP);
   }
@@ -69,16 +69,16 @@ Blockly.Blocks.colour_blend = {
     this.appendValueInput('COLOUR1')
         .setCheck('Colour')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(Blockly.LANG_COLOUR_BLEND_TITLE)
-        .appendTitle(Blockly.LANG_COLOUR_BLEND_COLOUR1);
+        .appendField(Blockly.LANG_COLOUR_BLEND_TITLE)
+        .appendField(Blockly.LANG_COLOUR_BLEND_COLOUR1);
     this.appendValueInput('COLOUR2')
         .setCheck('Colour')
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(Blockly.LANG_COLOUR_BLEND_COLOUR2);
+        .appendField(Blockly.LANG_COLOUR_BLEND_COLOUR2);
     this.appendValueInput('RATIO')
         .setCheck(Number)
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendTitle(Blockly.LANG_COLOUR_BLEND_RATIO);
+        .appendField(Blockly.LANG_COLOUR_BLEND_RATIO);
     this.setOutput(true, 'Colour');
     this.setTooltip(Blockly.LANG_COLOUR_BLEND_TOOLTIP);
   }

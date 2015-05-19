@@ -34,12 +34,12 @@ Blockly.Blocks.ab_drive_goto = {
     init: function() {
         this.setColour(180);
         this.appendDummyInput()
-                .appendTitle('Drive goto')
-                .appendTitle('Left')
-                .appendTitle(new Blockly.FieldTextInput('64',
+                .appendField('Drive goto')
+                .appendField('Left')
+                .appendField(new Blockly.FieldTextInput('64',
                         Blockly.FieldTextInput.numberValidator), 'LEFT')
-                .appendTitle('Right')
-                .appendTitle(new Blockly.FieldTextInput('64',
+                .appendField('Right')
+                .appendField(new Blockly.FieldTextInput('64',
                         Blockly.FieldTextInput.numberValidator), 'RIGHT');
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -52,12 +52,12 @@ Blockly.Blocks.ab_drive_speed = {
     init: function() {
         this.setColour(180);
         this.appendDummyInput()
-                .appendTitle('Drive speed')
-                .appendTitle('Left')
-                .appendTitle(new Blockly.FieldTextInput('64',
+                .appendField('Drive speed')
+                .appendField('Left')
+                .appendField(new Blockly.FieldTextInput('64',
                         Blockly.FieldTextInput.numberValidator), 'LEFT')
-                .appendTitle('Right')
-                .appendTitle(new Blockly.FieldTextInput('64',
+                .appendField('Right')
+                .appendField(new Blockly.FieldTextInput('64',
                         Blockly.FieldTextInput.numberValidator), 'RIGHT');
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -69,8 +69,8 @@ Blockly.Blocks.ab_drive_speed = {
 //Blockly.propc = new Blockly.Generator('propc');
 
 Blockly.propc.ab_drive_goto = function() {
-    var left = Number(this.getTitleValue('LEFT'));
-    var right = Number(this.getTitleValue('RIGHT'));
+    var left = Number(this.getFieldValue('LEFT'));
+    var right = Number(this.getFieldValue('RIGHT'));
 
     Blockly.propc.definitions_["include abdrive"] = '#include "abdrive.h"';
 
@@ -78,8 +78,8 @@ Blockly.propc.ab_drive_goto = function() {
 };
 
 Blockly.propc.ab_drive_speed = function() {
-    var left = Number(this.getTitleValue('LEFT'));
-    var right = Number(this.getTitleValue('RIGHT'));
+    var left = Number(this.getFieldValue('LEFT'));
+    var right = Number(this.getFieldValue('RIGHT'));
 
     Blockly.propc.definitions_["include abdrive"] = '#include "abdrive.h"';
 
